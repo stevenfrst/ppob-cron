@@ -77,4 +77,5 @@ func (u Usecase) PushEmail() {
 		log.Println(err)
 		return
 	}
+	log.Println("Email Send")
 }

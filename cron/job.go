@@ -18,8 +18,8 @@ func (c CronCase) DoSchedule() *cron.Cron {
 	jakartaTime, _ := time.LoadLocation("Asia/Jakarta")
 	scheduler := cron.New(cron.WithLocation(jakartaTime))
 
-	//scheduler.AddFunc("0 21 * * *", c.uc.PushEmail)
-	scheduler.AddFunc("*/5 * * * *", c.uc.PushEmail)
+	scheduler.AddFunc("0 21 * * *", c.uc.PushEmail)
+	//scheduler.AddFunc("* * * * *", c.uc.PushEmail)
 	//scheduler.AddFunc("* * * * *", c.uc.LuckyVoucher)
 
 	return scheduler
