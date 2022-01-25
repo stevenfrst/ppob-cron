@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  cron:
+    image: stevenfrst/ppob-cron:latest
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
