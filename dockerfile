@@ -31,6 +31,7 @@ RUN cat /build/config.json
 # Build a small image
 FROM alpine
 COPY --from=builder /dist/* /
+RUN apk add --no-cache tzdata
 
 # command to run with jaeger
 ENTRYPOINT ["./main"]
